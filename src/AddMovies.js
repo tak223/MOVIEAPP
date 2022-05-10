@@ -2,6 +2,7 @@ import React from 'react'
 import Modal from 'react-modal';
 import {useState} from 'react';
 import { Rating } from 'react-simple-star-rating'
+import { v4 as uuidv4 } from 'uuid';
 const customStyles = {
     content: {
       top: '50%',
@@ -36,7 +37,7 @@ const AddMovies = ({handelAdd}) => {
     //******************************************************** */
     const submit = (e) => {
         e.preventDefault();
-        handelAdd({...form,rating:rating} );
+        handelAdd({...form,rating:rating,id: uuidv4()} );
         setform( {
             title:'',
             url:'',

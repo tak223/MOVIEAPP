@@ -5,6 +5,12 @@ import Filter from "./components/Filter";
 import AddMovies from "./AddMovies";
 import {useState} from 'react';
 import   './App.css'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Descreption from "./components/Descreption";
 
 function App() {
   const [input,setInput] = useState('');
@@ -15,7 +21,7 @@ function App() {
 const handelAdd = (newm) => {
   setVml([...mvls,newm])
 }
-
+ 
 const handleRating = (rate) => {
   setRate(rate)
 
@@ -28,10 +34,21 @@ const handleRating = (rate) => {
 
   return (
     <div className="App">
+<Routes>
+<Route exact path='/' element={  
 
+<div>
   <Filter  handleRating ={handleRating  } rating={rate}   setInput={setInput} /> 
   <MovieList mvl={mvls}  rating={rate} setRate = {setRate} input={input} setInput={setInput}   />
   <AddMovies handelAdd={handelAdd} />
+</div>
+
+
+
+} />
+   <Route exact path='/desc/:id' element={<Descreption mvl={mvls} />} />
+</Routes>
+
     </div>
    );
 } 

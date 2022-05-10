@@ -7,7 +7,7 @@ const MovieList = ({mvl,filterstar,rating,setRate, input,setInput , filterstars 
     <div className='div'>
         {    mvl.filter(
         (el) => 
-          el.title.toLocaleLowerCase().includes(input.toLocaleLowerCase()) && el.rating >= rating
+          el.title.toLocaleLowerCase().includes(input.toLocaleLowerCase()) && el.rating == rating
         
         ).map((el,i)=> <MovieCard el={el} key={i} />
             )

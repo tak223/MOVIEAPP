@@ -27,7 +27,15 @@ body{
     margin :20px;
     background-color: white;
 
+   padding: 10px;
+
+
 }
+.cd:hover{
+    width:380px;
+    height:810px ;
+    transition:width height 0.5s linear 0s;
+    }
 .navbare{
     background-color: rgb(19, 77, 88);
     width: 100%;
@@ -81,6 +89,17 @@ padding: 10px;
 	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
 	background-color:#019ad2;
 }
-
+.desc{
+    display: flex;
+    margin: 70px;
+    background-color: #0c516a;
+    height: 550px;
+    width:90%;
+    padding: 30px;
+}
+pre:nth-child(2){
+   margin-left: 30px; 
+   margin-top: 40px;
+}
 
     
