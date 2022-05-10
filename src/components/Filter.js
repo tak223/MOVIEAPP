@@ -1,8 +1,7 @@
 import React from 'react'
 import { Rating } from 'react-simple-star-rating'
-const Filter = ({filterstar,rating,handleRating,setInput,filterByName ,input}) => {
+const Filter = ({filterstar,rating,handleRating,setInput,input}) => {
 
-    console.log(rating)
   return (
     <div className="navbare">
     
